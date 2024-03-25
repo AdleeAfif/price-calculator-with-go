@@ -36,10 +36,11 @@ func main() {
 			}
 		case <-channels[index]:
 			fmt.Println("Job done!")
+			// close(channels[index])
 		}
 	}
 
-	for _, channel := range channels {
-		<-channel
-	}
+	// for _, channel := range channels {
+	// 	<-channel
+	// }
 }
